@@ -1,0 +1,12 @@
+@media (max-width : 428px){
+    .respo-footer{
+        flex-direction: column !important;
+        gap: 1.5vh;
+    }
+    .respo-footer-1{
+        flex-direction: column !important;
+    }
+    .copy{
+      text-align: left;
+    }
+}
