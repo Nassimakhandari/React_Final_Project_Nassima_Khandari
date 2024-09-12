@@ -5,6 +5,7 @@ import Data from "../../json/app.json"
 import Slider from 'react-slick';
 import React from 'react';
 import '../../style/home.css'
+
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
@@ -77,6 +78,7 @@ const Home = () => {
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
   };
+
   return (
     <>
       <div className='overflow-hidden h-[91vh] pt-20'>
@@ -87,7 +89,7 @@ const Home = () => {
               <p className="text-white text-2xl">Women Collection 2018</p>
               <h1 className="text-7xl text-white font-bold">NEW ARRIVAL</h1>
               <div>
-                <button className="py-2 px-6 bg-white rounded-full hover:bg-[#e65540] hover:text-white">Shop Now</button>
+                <button className="py-2 px-6 bg-white rounded-full font-light hover:bg-[#e65540] hover:text-white">Shop Now</button>
               </div>
             </div>
           </div>
@@ -97,7 +99,7 @@ const Home = () => {
               <p className="text-white text-2xl">Women Collection 2018</p>
               <h1 className="text-7xl text-white font-bold">NEW ARRIVAL</h1>
               <div>
-                <button className="py-2 px-6 bg-white rounded-full hover:bg-[#e65540] hover:text-white">Shop Now</button>
+                <button className="py-2 px-6 bg-white rounded-full font-light hover:bg-[#e65540] hover:text-white">Shop Now</button>
               </div>
             </div>
           </div>
@@ -107,7 +109,7 @@ const Home = () => {
               <p className="text-white text-2xl">Women Collection 2018</p>
               <h1 className="text-7xl text-white font-bold">NEW ARRIVAL</h1>
               <div>
-                <button className="py-2 px-6 bg-white rounded-full hover:bg-[#e65540] hover:text-white">Shop Now</button>
+                <button className="py-2 px-6 bg-white rounded-full font-light hover:bg-[#e65540] hover:text-white">Shop Now</button>
               </div>
             </div>
           </div>
