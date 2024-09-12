@@ -4,6 +4,7 @@ import images from '../../constant/images';
 import Data from "../../json/app.json"
 import Slider from 'react-slick';
 import React from 'react';
+import '../../style/home.css'
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
@@ -112,15 +113,15 @@ const Home = () => {
           </div>
         </Slider>
       </div>
-      <div className="flex gap-5 justify-center items-center">
+      <div className="flex gap-5 justify-center items-center section2">
         <div className="flex flex-col gap-5">
-          <div className="relative overflow-hidden">
+          <div className="relative overflow-hidden section2-child">
             <img src={images.img1} className="h-[58vh] w-[23.6vw] transition-all duration-500 ease-in-out hover:scale-110" alt="" />
             <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white py-2 px-12 hover:bg-[#e65540] hover:text-white font-light text-lg">
               <button >Dresses</button>
             </div>
           </div>
-          <div className="relative overflow-hidden">
+          <div className="relative overflow-hidden section2-child">
             <img src={images.img2} className="h-[38vh] w-[23.6vw] object-cover transition-all duration-500 ease-in-out hover:scale-110" alt="" />
             <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white py-2 px-12 hover:bg-[#e65540] hover:text-white font-light text-lg">
               <button>Sunglasses</button>
@@ -129,13 +130,13 @@ const Home = () => {
         </div>
 
         <div className="flex flex-col gap-5">
-          <div className="relative overflow-hidden">
+          <div className="relative overflow-hidden section2-child">
             <img src={images.img3} className="h-[38vh] w-[23.6vw] object-cover transition-all duration-500 ease-in-out hover:scale-110" alt="" />
             <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white py-2 px-12  hover:bg-[#e65540] hover:text-white font-light text-lg">
               <button >Watches</button>
             </div>
           </div>
-          <div className="relative overflow-hidden">
+          <div className="relative overflow-hidden section2-child">
             <img src={images.img4} className="h-[58vh] w-[23.6vw] transition-all duration-500 ease-in-out hover:scale-110" alt="" />
             <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white py-2 px-12 hover:bg-[#e65540] hover:text-white font-light text-lg">
               <button>Footerwear</button>
@@ -144,13 +145,13 @@ const Home = () => {
         </div>
 
         <div className="flex flex-col gap-5">
-          <div className="relative overflow-hidden">
+          <div className="relative overflow-hidden section2-child">
             <img src={images.img5} className="h-[58vh] w-[23.6vw] transition-all duration-500 ease-in-out hover:scale-110" alt="" />
             <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white py-2 px-12 hover:bg-[#e65540] hover:text-white font-light text-lg">
               <button>Bags</button>
             </div>
           </div>
-          <div className="relative overflow-hidden">
+          <div className="relative overflow-hidden section2-child">
             <img src={images.img6} className="h-[38vh] w-[23.6vw] transition-all duration-500 ease-in-out hover:scale-110" alt="" />
             <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white py-2 px-12 hover:bg-[#e65540] hover:text-white font-light text-lg">
               <button>Accessories</button>
@@ -165,9 +166,9 @@ const Home = () => {
           {Data.map((e) => (
             <div className="pt-16 p-4 ">
               <div>
-                <img src={images[e.image]} alt="" className="h-[44vh] w-[21vw] object-cover" />
+                <img src={images[e.image]} alt="" className="h-[44vh] w-[21vw] object-cover  md:h-96 md:w-[50vw]" />
               </div>
-              <div className="pt-4">
+              <div className="pt-4 ">
                 <h1 className="font-light text-gray-700">{e.title}</h1>
                 <h1 className="font-light text-gray-700">{e.price}</h1>
               </div>

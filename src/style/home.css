@@ -1,0 +1,8 @@
+@media (max-width : 428px) {
+    .section2{
+        flex-direction: column;
+    }
+.section2-child{
+    width: 30vw;
+}
+}
