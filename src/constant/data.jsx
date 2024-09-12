@@ -1,0 +1,1 @@
+export * as data from "../json/app.json"
