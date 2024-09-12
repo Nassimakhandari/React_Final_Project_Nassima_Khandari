@@ -1,7 +1,23 @@
-.bg-image{
+.bg-image {
     background-image: url(../assets/images/about_top.jpg);
     background-repeat: no-repeat;
     height: 40vh;
     background-size: cover;
     background-position: center;
+}
+
+@media (max-width : 428px) {
+    .about-img {
+        width: 100% !important;
+    }
+
+    .respo-about {
+        width: 100 !important;
+        padding: 0 2vw;
+    }
+    .respo{
+        flex-direction: column;
+        padding: 4vh 0;
+    }
+
 }
