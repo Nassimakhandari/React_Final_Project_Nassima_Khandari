@@ -7,17 +7,17 @@ import { FaLongArrowAltRight } from 'react-icons/fa';
 const Blog = () => {
     return (
         <>
-            <div className='pt-[14vh]'>
+            <div className=''>
                 <div>
                     <div className='relative'>
-                        <img src={images.blog} alt="" className='object-cover h-[30vh] w-full md:h-[40vh] lg:h-[50vh]' />
+                        <img src={images.blog} alt="" className='object-contain w-full md:h-[40vh] lg:h-[47.8vh]' />
                         <div className='absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 text-center'>
-                            <p className='font-bold text-3xl md:text-4xl lg:text-5xl text-white'>NEWS</p>
+                            <p className='font-bold text-2xl md:text-4xl lg:text-5xl text-white'>NEWS</p>
                         </div>
                     </div>
                 </div>
 
-                <div className='flex flex-col md:flex-row py-16 px-4 md:px-[10vw] lg:pl-[15vw]'>
+                <div className='flex flex-col md:flex-row pb-12 px-4 md:px-[10vw] lg:pl-[15vw]'>
                     <div className='w-full md:w-[80%]'>
                         <div className='flex flex-col gap-8'>
                             <div className='w-full overflow-hidden'>
@@ -61,7 +61,7 @@ const Blog = () => {
 
                     <div className='w-full md:w-[30%] mt-8 md:mt-0'>
                         <div className='relative'>
-                            <input type="text" name="" id="" className='w-full md:w-[80%] border-[1px] border-gray-200 p-4 font-light placeholder:text-gray-600 text-sm rounded-full' placeholder='Search all articles...' />
+                            <input type="text" name="" id="" className='w-full md:w-[80%] border-[1px] border-gray-200 px-2 p-3 pl-5 font-light placeholder:text-gray-600 text-sm rounded-full' placeholder='Search all articles...' />
                             <FaSearch className="absolute right-20 top-1/2 transform -translate-y-1/2 text-gray-400" />
                         </div>
                         <p className='text-gray-800 text-xl md:text-2xl font-extrabold pt-10 pb-10'>Featured Products</p>
