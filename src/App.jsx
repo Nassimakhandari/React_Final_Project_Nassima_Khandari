@@ -8,6 +8,7 @@ import Blog from "./pages/Blog/blog.jsx";
 import Navbar from "./layouts/navbar.jsx";
 import Footer from "./layouts/footer.jsx";
 import Conatct from "./pages/Contact/conatct.jsx";
+import DetailsProducts from "./pages/Details/DetailsProducts.jsx";
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
         <Route path="/contact" element={<Conatct />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/details/:title" element={<DetailsProducts />} />
+
       </Routes>
       <Footer />
     </>

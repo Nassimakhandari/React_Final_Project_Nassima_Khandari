@@ -6,6 +6,7 @@ import Slider from 'react-slick';
 import React from 'react';
 import '../../style/home.css'
 import app2 from "../../json/app2.json";
+import { useNavigate } from 'react-router-dom'
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
@@ -41,9 +42,10 @@ const Home = () => {
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
   }
-
   const index = Math.floor(Math.random() * app2.length);
   const randomJson = app2[index];
+
+  const navigate = useNavigate();
   return (
     <>
       <div className='overflow-hidden h-[91vh] pt-20'>
@@ -133,12 +135,12 @@ const Home = () => {
           <div className="">
             <div className="flex items-center justify-center gap-9 ">
               {Data.slice(0, 4).map((e) => (
-                <div className="pt-16 pb-10 w-[40%]">
+                <div className="pt-16 pb-10 w-[40%] ">
                   <div>
                     <img src={images[e.image]} alt="" className=" w-[100%] object-cover  md:h-96 md:w-[50vw]" />
                   </div>
                   <div className="pt-4 ">
-                    <h1 className="font-light text-gray-700 hover:text-[#e65540] ">{e.title}</h1>
+                    <h1 className="font-light text-gray-700 hover:text-[#e65540] "key={e.title} onClick={() => navigate(`/details/${e.title}`)}>{e.title}</h1>
                     <h1 className="font-light text-gray-700">{e.price}</h1>
                   </div>
                 </div>
@@ -148,12 +150,12 @@ const Home = () => {
           <div>
             <div className="flex items-center justify-center gap-9 ">
               {Data.slice(4).map((e) => (
-                <div className="pt-16 pb-10 w-[40%]">
+                <div className="pt-16 pb-10 w-[40%]" >
                   <div>
                     <img src={images[e.image]} alt="" className=" w-[100%] object-cover  md:h-96 md:w-[50vw]" />
                   </div>
                   <div className="pt-4 ">
-                    <h1 className="font-light text-gray-700">{e.title}</h1>
+                    <h1 className="font-light text-gray-700 hover:text-[#e65540] " key={e.title} onClick={() => navigate(`/details/${e.title}`)}>{e.title}</h1>
                     <h1 className="font-light text-gray-700">{e.price}</h1>
                   </div>
                 </div>
