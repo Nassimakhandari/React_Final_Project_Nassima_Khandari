@@ -41,43 +41,8 @@ const Home = () => {
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
   };
-  const settings2 = {
-    dots: false,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    initialSlide: 0,
 
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ],
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
-  };
+
 
   return (
     <>
@@ -164,18 +129,37 @@ const Home = () => {
 
       <div className="slider-container pt-20 mx-auto max-w-6xl flex-row justify-center ">
         <h1 className="font-bold text-3xl text-center">FEATURED PRODUCTS</h1>
-        <Slider {...settings2}>
-          {Data.map((e) => (
-            <div className="pt-16 p-4 ">
-              <div>
-                <img src={images[e.image]} alt="" className="h-[44vh] w-[21vw] object-cover  md:h-96 md:w-[50vw]" />
-              </div>
-              <div className="pt-4 ">
-                <h1 className="font-light text-gray-700">{e.title}</h1>
-                <h1 className="font-light text-gray-700">{e.price}</h1>
-              </div>
+        <Slider {...settings}>
+          <div className="">
+            <div className="flex items-center justify-center gap-9 ">
+              {Data.slice(0, 4).map((e) => (
+                <div className="pt-16 pb-10 w-[40%]">
+                  <div>
+                    <img src={images[e.image]} alt="" className=" w-[100%] object-cover  md:h-96 md:w-[50vw]" />
+                  </div>
+                  <div className="pt-4 ">
+                    <h1 className="font-light text-gray-700">{e.title}</h1>
+                    <h1 className="font-light text-gray-700">{e.price}</h1>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
+          <div>
+            <div className="flex items-center justify-center gap-9 ">
+              {Data.slice(4).map((e) => (
+                <div className="pt-16 pb-10 w-[40%]">
+                  <div>
+                    <img src={images[e.image]} alt="" className=" w-[100%] object-cover  md:h-96 md:w-[50vw]" />
+                  </div>
+                  <div className="pt-4 ">
+                    <h1 className="font-light text-gray-700">{e.title}</h1>
+                    <h1 className="font-light text-gray-700">{e.price}</h1>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </Slider>
       </div>
 

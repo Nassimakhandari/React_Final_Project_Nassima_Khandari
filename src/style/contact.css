@@ -1,0 +1,17 @@
+@media (max-width : 428px){
+    .respo-contact{
+        flex-direction: column;
+    }
+    .respo-form{
+        width: 100% !important;
+    }
+    form input{
+        width: 90vw  !important;
+    }
+    form textarea {
+        width: 90vw !important;
+    }
+    iframe{
+        width: 90vw !important;
+    }
+}
