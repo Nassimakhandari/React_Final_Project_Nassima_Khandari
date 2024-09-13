@@ -163,6 +163,40 @@ const Home = () => {
         </Slider>
       </div>
 
+      <div className="flex flex-col max-w-screen-xl mx-auto justify-center items-center p-4">
+        <div className="text-center pb-8">
+          <h1 className="text-4xl font-bold">OUR BLOG</h1>
+        </div>
+        <div className="lg:flex lg:flex-row md:flex-col justify-center items-start ">
+          <div className="w-full md:w-1/2 lg:w-[30%] p-4">
+            <div className="overflow-hidden">
+              <img src={images.blog1} alt="Blog Post 1" className="w-full h-auto object-cover pb-4  transition-all duration-500 ease-in-out hover:scale-110" />
+            </div>
+            <h1 className="text-lg font-normal hover:text-[#e65540] pb-2">Black Friday Guide: Best Sales & Discount <br /> Codes</h1>
+            <h2 className="text-sm font-light text-gray-400 pb-2">by <span className="text-gray-700"> fashe-theme Admin </span> on <span className="text-gray-700"> Dec 28, 2017 </span></h2>
+            <p className="text-gray-400 text-sm font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br /> Etiam sed turpis sed lorem dignissim vulputate nec <br /> cursus ante. Nunc sit...</p>
+          </div>
+
+          <div className="w-full md:w-1/2 lg:w-[30%] p-4 ">
+            <div className="overflow-hidden">
+              <img src={images.blog2} alt="Blog Post 2" className="w-full h-auto object-cover pb-4  transition-all duration-500 ease-in-out hover:scale-110" />
+            </div>
+            <h1 className="text-lg font-normal hover:text-[#e65540] pb-2">The White Sneakers Nearly Every Fashion <br /> Girls Own</h1>
+            <h2 className="text-sm font-light text-gray-400 pb-2">by <span className="text-gray-700"> fashe-theme Admin </span> on <span className="text-gray-700"> Dec 28, 2017 </span></h2>
+            <p className="text-gray-400 text-sm font-light">Duis ut velit gravida nibh bibendum commodo. Sus- <br />pendisse pellentesque mattis augue id euixs font-lightod. Interdum et...</p>
+          </div>
+
+          <div className="w-full md:w-1/2 lg:w-[30%] p-4">
+            <div className="overflow-hidden">
+              <img src={images.blog3} alt="Blog Post 3" className="w-full h-auto object-cover pb-4 transition-all duration-500 ease-in-out hover:scale-110" />
+            </div>
+            <h1 className="text-lg font-normal hover:text-[#e65540] pb-2">New York SS 2018 Street Style: By Annina <br /> Mislin</h1>
+            <h2 className="text-sm font-light text-gray-400 pb-2">by <span className="text-gray-700"> fashe-theme Admin </span> on <span className="text-gray-700"> Dec 28, 2017 </span></h2>
+            <p className="text-gray-400 text-sm font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br /> Etiam sed turpis sed lorem dignissim vulputate nec <br /> cursus ante. Nunc sit...</p>
+          </div>
+        </div>
+      </div>
+
     </>
   );
 };
