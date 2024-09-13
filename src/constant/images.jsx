@@ -25,5 +25,6 @@ export default {
     random3: require('../assets/images/random3.jpg'),
     random4: require('../assets/images/random4.jpg'),
     random5: require('../assets/images/random5.jpg'),
+    blog: require('../assets/images/blog_top.webp'),
 
 }

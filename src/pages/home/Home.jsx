@@ -40,7 +40,7 @@ const Home = () => {
     adaptiveHeight: true,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
-  };
+  }
 
   const index = Math.floor(Math.random() * app2.length);
   const randomJson = app2[index];
@@ -54,7 +54,7 @@ const Home = () => {
               <p className="text-white text-2xl">Women Collection 2018</p>
               <h1 className="text-7xl text-white font-bold">NEW ARRIVAL</h1>
               <div>
-                <button className="py-2 px-6 bg-white rounded-full font-light hover:bg-[#e65540] hover:text-white">Shop Now</button>
+                <button className="py-2 px-6 bg-white rounded-full font-light transition duration-500 hover:bg-[#e65540] hover:text-white">Shop Now</button>
               </div>
             </div>
           </div>
@@ -64,7 +64,7 @@ const Home = () => {
               <p className="text-white text-2xl">Women Collection 2018</p>
               <h1 className="text-7xl text-white font-bold">NEW ARRIVAL</h1>
               <div>
-                <button className="py-2 px-6 bg-white rounded-full font-light hover:bg-[#e65540] hover:text-white">Shop Now</button>
+                <button className="py-2 px-6 bg-white rounded-full font-light transition duration-500 hover:bg-[#e65540] hover:text-white">Shop Now</button>
               </div>
             </div>
           </div>
@@ -74,7 +74,7 @@ const Home = () => {
               <p className="text-white text-2xl">Women Collection 2018</p>
               <h1 className="text-7xl text-white font-bold">NEW ARRIVAL</h1>
               <div>
-                <button className="py-2 px-6 bg-white rounded-full font-light hover:bg-[#e65540] hover:text-white">Shop Now</button>
+                <button className="py-2 px-6 bg-white rounded-full font-light transition duration-500 hover:bg-[#e65540] hover:text-white">Shop Now</button>
               </div>
             </div>
           </div>
@@ -84,13 +84,13 @@ const Home = () => {
         <div className="flex flex-col gap-5">
           <div className="relative overflow-hidden section2-child">
             <img src={images.img1} className="h-[58vh] w-[23.6vw] transition-all duration-500 ease-in-out hover:scale-110" alt="" />
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white py-2 px-12 hover:bg-[#e65540] hover:text-white font-light text-lg">
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 transition duration-500 bg-white py-2 px-12 hover:bg-[#e65540] hover:text-white font-light text-lg">
               <button >Dresses</button>
             </div>
           </div>
           <div className="relative overflow-hidden section2-child">
             <img src={images.img2} className="h-[38vh] w-[23.6vw] object-cover transition-all duration-500 ease-in-out hover:scale-110" alt="" />
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white py-2 px-12 hover:bg-[#e65540] hover:text-white font-light text-lg">
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 transition duration-500 bg-white py-2 px-12 hover:bg-[#e65540] hover:text-white font-light text-lg">
               <button>Sunglasses</button>
             </div>
           </div>
@@ -99,13 +99,13 @@ const Home = () => {
         <div className="flex flex-col gap-5">
           <div className="relative overflow-hidden section2-child">
             <img src={images.img3} className="h-[38vh] w-[23.6vw] object-cover transition-all duration-500 ease-in-out hover:scale-110" alt="" />
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white py-2 px-12  hover:bg-[#e65540] hover:text-white font-light text-lg">
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 transition duration-500 bg-white py-2 px-12  hover:bg-[#e65540] hover:text-white font-light text-lg">
               <button >Watches</button>
             </div>
           </div>
           <div className="relative overflow-hidden section2-child">
             <img src={images.img4} className="h-[58vh] w-[23.6vw] transition-all duration-500 ease-in-out hover:scale-110" alt="" />
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white py-2 px-12 hover:bg-[#e65540] hover:text-white font-light text-lg">
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 transition duration-500 bg-white py-2 px-12 hover:bg-[#e65540] hover:text-white font-light text-lg">
               <button>Footerwear</button>
             </div>
           </div>
@@ -114,13 +114,13 @@ const Home = () => {
         <div className="flex flex-col gap-5">
           <div className="relative overflow-hidden section2-child">
             <img src={images.img5} className="h-[58vh] w-[23.6vw] transition-all duration-500 ease-in-out hover:scale-110" alt="" />
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white py-2 px-12 hover:bg-[#e65540] hover:text-white font-light text-lg">
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 transition duration-500 bg-white py-2 px-12 hover:bg-[#e65540] hover:text-white font-light text-lg">
               <button>Bags</button>
             </div>
           </div>
           <div className="relative overflow-hidden section2-child">
             <img src={images.img6} className="h-[38vh] w-[23.6vw] transition-all duration-500 ease-in-out hover:scale-110" alt="" />
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white py-2 px-12 hover:bg-[#e65540] hover:text-white font-light text-lg">
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 transition duration-500 bg-white py-2 px-12 hover:bg-[#e65540] hover:text-white font-light text-lg">
               <button>Accessories</button>
             </div>
           </div>
@@ -138,7 +138,7 @@ const Home = () => {
                     <img src={images[e.image]} alt="" className=" w-[100%] object-cover  md:h-96 md:w-[50vw]" />
                   </div>
                   <div className="pt-4 ">
-                    <h1 className="font-light text-gray-700">{e.title}</h1>
+                    <h1 className="font-light text-gray-700 hover:text-[#e65540] ">{e.title}</h1>
                     <h1 className="font-light text-gray-700">{e.price}</h1>
                   </div>
                 </div>
@@ -211,7 +211,7 @@ const Home = () => {
             <div className="overflow-hidden">
               <img src={images.blog1} alt="Blog Post 1" className="w-full h-auto object-cover pb-4  transition-all duration-500 ease-in-out hover:scale-110" />
             </div>
-            <h1 className="text-lg font-normal hover:text-[#e65540] select-none pb-2">Black Friday Guide: Best Sales & Discount <br /> Codes</h1>
+            <h1 className="text-lg font-normal hover:text-[#e65540] transition duration-500 select-none pb-2">Black Friday Guide: Best Sales & Discount <br /> Codes</h1>
             <h2 className="text-sm font-light text-gray-400 pb-2">by <span className="text-gray-700"> fashe-theme Admin </span> on <span className="text-gray-700"> Dec 28, 2017 </span></h2>
             <p className="text-gray-400 text-sm font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br /> Etiam sed turpis sed lorem dignissim vulputate nec <br /> cursus ante. Nunc sit...</p>
           </div>
@@ -220,7 +220,7 @@ const Home = () => {
             <div className="overflow-hidden">
               <img src={images.blog2} alt="Blog Post 2" className="w-full h-auto object-cover pb-4  transition-all duration-500 ease-in-out hover:scale-110" />
             </div>
-            <h1 className="text-lg font-normal hover:text-[#e65540] select-none pb-2">The White Sneakers Nearly Every Fashion <br /> Girls Own</h1>
+            <h1 className="text-lg font-normal hover:text-[#e65540] transition duration-500 select-none pb-2">The White Sneakers Nearly Every Fashion <br /> Girls Own</h1>
             <h2 className="text-sm font-light text-gray-400 pb-2">by <span className="text-gray-700"> fashe-theme Admin </span> on <span className="text-gray-700"> Dec 28, 2017 </span></h2>
             <p className="text-gray-400 text-sm font-light">Duis ut velit gravida nibh bibendum commodo. Sus- <br />pendisse pellentesque mattis augue id euixs font-lightod. Interdum et...</p>
           </div>
@@ -229,7 +229,7 @@ const Home = () => {
             <div className="overflow-hidden">
               <img src={images.blog3} alt="Blog Post 3" className="w-full h-auto object-cover pb-4 transition-all duration-500 ease-in-out hover:scale-110" />
             </div>
-            <h1 className="text-lg font-normal hover:text-[#e65540] select-none pb-2">New York SS 2018 Street Style: By Annina <br /> Mislin</h1>
+            <h1 className="text-lg font-normal hover:text-[#e65540] transition duration-500 select-none pb-2">New York SS 2018 Street Style: By Annina <br /> Mislin</h1>
             <h2 className="text-sm font-light text-gray-400 pb-2">by <span className="text-gray-700"> fashe-theme Admin </span> on <span className="text-gray-700"> Dec 28, 2017 </span></h2>
             <p className="text-gray-400 text-sm font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br /> Etiam sed turpis sed lorem dignissim vulputate nec <br /> cursus ante. Nunc sit...</p>
           </div>
