@@ -39,7 +39,7 @@ const Conatct = () => {
                             <input className="ps-5 border w-[33vw] h-10 rounded-sm" type="email" name='Email' placeholder="Enter your email" />
                             <input className="ps-5 border w-[33vw] h-10 rounded-sm" type="text" name='Email' placeholder="Phone" />
                             <textarea className="ps-5 border h-32 w-[33vw] rounded-sm " placeholder="Message" name='Message'></textarea>
-                            <button className="bg-black text-white text-center py-2 px-11 rounded-full ">SEND</button>
+                            <button className="bg-black text-white text-center py-2 px-11 rounded-full hover:bg-[#e65540] hover:text-white">SEND</button>
                         </form>
                     </div>
                 </div>

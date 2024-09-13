@@ -172,7 +172,7 @@ const Home = () => {
             <div className="overflow-hidden">
               <img src={images.blog1} alt="Blog Post 1" className="w-full h-auto object-cover pb-4  transition-all duration-500 ease-in-out hover:scale-110" />
             </div>
-            <h1 className="text-lg font-normal hover:text-[#e65540] pb-2">Black Friday Guide: Best Sales & Discount <br /> Codes</h1>
+            <h1 className="text-lg font-normal hover:text-[#e65540] select-none pb-2">Black Friday Guide: Best Sales & Discount <br /> Codes</h1>
             <h2 className="text-sm font-light text-gray-400 pb-2">by <span className="text-gray-700"> fashe-theme Admin </span> on <span className="text-gray-700"> Dec 28, 2017 </span></h2>
             <p className="text-gray-400 text-sm font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br /> Etiam sed turpis sed lorem dignissim vulputate nec <br /> cursus ante. Nunc sit...</p>
           </div>
@@ -181,7 +181,7 @@ const Home = () => {
             <div className="overflow-hidden">
               <img src={images.blog2} alt="Blog Post 2" className="w-full h-auto object-cover pb-4  transition-all duration-500 ease-in-out hover:scale-110" />
             </div>
-            <h1 className="text-lg font-normal hover:text-[#e65540] pb-2">The White Sneakers Nearly Every Fashion <br /> Girls Own</h1>
+            <h1 className="text-lg font-normal hover:text-[#e65540] select-none pb-2">The White Sneakers Nearly Every Fashion <br /> Girls Own</h1>
             <h2 className="text-sm font-light text-gray-400 pb-2">by <span className="text-gray-700"> fashe-theme Admin </span> on <span className="text-gray-700"> Dec 28, 2017 </span></h2>
             <p className="text-gray-400 text-sm font-light">Duis ut velit gravida nibh bibendum commodo. Sus- <br />pendisse pellentesque mattis augue id euixs font-lightod. Interdum et...</p>
           </div>
@@ -190,13 +190,32 @@ const Home = () => {
             <div className="overflow-hidden">
               <img src={images.blog3} alt="Blog Post 3" className="w-full h-auto object-cover pb-4 transition-all duration-500 ease-in-out hover:scale-110" />
             </div>
-            <h1 className="text-lg font-normal hover:text-[#e65540] pb-2">New York SS 2018 Street Style: By Annina <br /> Mislin</h1>
+            <h1 className="text-lg font-normal hover:text-[#e65540] select-none pb-2">New York SS 2018 Street Style: By Annina <br /> Mislin</h1>
             <h2 className="text-sm font-light text-gray-400 pb-2">by <span className="text-gray-700"> fashe-theme Admin </span> on <span className="text-gray-700"> Dec 28, 2017 </span></h2>
             <p className="text-gray-400 text-sm font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br /> Etiam sed turpis sed lorem dignissim vulputate nec <br /> cursus ante. Nunc sit...</p>
           </div>
         </div>
       </div>
 
+      <div className="flex flex-col justify-center items-center gap-20 p-24">
+        <div className="text-3xl font-bold">
+          <h1>@ FOLLOW US ON INSTAGRAM</h1>
+        </div>
+        <div className="flex gap-36 text-center ">
+          <div>
+            <h1 className="text-gray-700 font-light text-xl">Free Delivery Worldwide</h1>
+            <h1 className="text-gray-400 font-light text-sm">Mirum est notare quam littera gothica</h1>
+          </div>
+          <div className="border-gray-300 border-l-[1px] pl-20">
+            <h1 className="text-gray-700 font-light text-xl">30 Days Return</h1>
+            <h1 className="text-gray-400 font-light text-sm">Simply return it within 30 days for an exchange.</h1>
+          </div>
+          <div className="border-gray-300 border-l-[1px] pl-20">
+            <h1 className="text-gray-700 font-light text-xl">Store Opening</h1>
+            <h1 className="text-gray-400 font-light text-sm">Shop open from Monday to Sunday</h1>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
