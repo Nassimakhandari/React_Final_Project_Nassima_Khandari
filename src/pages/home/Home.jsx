@@ -5,7 +5,7 @@ import Data from "../../json/app.json"
 import Slider from 'react-slick';
 import React from 'react';
 import '../../style/home.css'
-
+import app2 from "../../json/app2.json";
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
@@ -42,8 +42,8 @@ const Home = () => {
     prevArrow: <SamplePrevArrow />,
   };
 
-
-
+  const index = Math.floor(Math.random() * app2.length);
+  const randomJson = app2[index];
   return (
     <>
       <div className='overflow-hidden h-[91vh] pt-20'>
@@ -163,9 +163,48 @@ const Home = () => {
         </Slider>
       </div>
 
+      <div className="flex flex-col md:flex-row gap-6 md:gap-12 h-auto md:h-[70vh] mt-8 mb-8 md:mt-16 md:mb-16 justify-center items-center bg-[#f2f2f2]">
+        <div className="relative overflow-hidden w-full md:w-[33vw] h-[65vh] md:h-[55vh]">
+          <img src={images.random} alt="" className="w-full h-full object-cover transition-all duration-500 ease-in-out hover:scale-110" />
+          <div className='absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 flex flex-col text-center gap-4'>
+            <h1 className="text-2xl md:text-3xl text-white font-bold">The Beauty</h1>
+            <h1 className="text-4xl md:text-6xl text-white font-bold">LOOKBOOK</h1>
+            <p className="text-lg md:text-xl text-white font-normal">VIEW COLLECTION</p>
+          </div>
+        </div>
+        <div className='w-full md:w-[33vw]'>
+          <div className='bg-white overflow-hidden flex flex-col justify-center items-center shadow-lg h-auto md:h-[55vh] w-full md:w-[33vw] pb-48 pt-14'>
+            <img src={images[randomJson.image]} alt="" className='w-full md:w-[70%] h-[250px] md:h-[auto] object-cover transition-all duration-300 ease-in-out hover:scale-110' />
+            <div className='text-center flex flex-col justify-center items-center '>
+              <p className='text-gray-700 pb-2 text-lg md:text-[18px] font-light'>{randomJson.name}</p>
+              <p className='text-gray-700 pb-2 text-lg md:text-[18px] font-light'>${randomJson.price}</p>
+              <div className='flex flex-wrap gap-4 pb-4 px-4 md:px-10'>
+                <div className='flex flex-col justify-center items-center border-[1px] border-gray-400 py-[2px] px-2'>
+                  <p className='text-gray-800 text-lg md:text-[18px] font-light'>-2082</p>
+                  <p className='text-gray-400 font-light'>days</p>
+                </div>
+                <div className='flex flex-col justify-center items-center border-[1px] border-gray-400 py-[2px] px-2'>
+                  <p className='text-gray-800 text-lg md:text-[18px] font-light'>-20</p>
+                  <p className='text-gray-400 font-light'>hrs</p>
+                </div>
+                <div className='flex flex-col justify-center items-center border-[1px] border-gray-400 py-[2px] px-2'>
+                  <p className='text-gray-800 text-lg md:text-[18px] font-light'>-53</p>
+                  <p className='text-gray-400 font-light'>mins</p>
+                </div>
+                <div className='flex flex-col justify-center items-center border-[1px] border-gray-400 py-[2px] px-2'>
+                  <p className='text-gray-800 text-lg md:text-[18px] font-light'>-41</p>
+                  <p className='text-gray-400 font-light'>secs</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
       <div className="flex flex-col max-w-screen-xl mx-auto justify-center items-center p-4">
         <div className="text-center pb-8">
-          <h1 className="text-4xl font-bold">OUR BLOG</h1>
+          <h1 className="text-3xl font-bold">OUR BLOG</h1>
         </div>
         <div className="lg:flex lg:flex-row md:flex-col justify-center items-start ">
           <div className="w-full md:w-1/2 lg:w-[30%] p-4">

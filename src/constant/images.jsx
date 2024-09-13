@@ -20,4 +20,10 @@ export default {
     blog1: require('../assets/images/blog-01.jpg'),
     blog2: require('../assets/images/blog-02.jpg'),
     blog3: require('../assets/images/blog-03.jpg'),
+    random: require('../assets/images/bg-video-01.jpg.webp'),
+    random2: require('../assets/images/random2.jpg'),
+    random3: require('../assets/images/random3.jpg'),
+    random4: require('../assets/images/random4.jpg'),
+    random5: require('../assets/images/random5.jpg'),
+
 }

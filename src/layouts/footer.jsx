@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaFacebookF, FaTwitter, FaPinterestSquare, FaGooglePlusG, FaInstagram } from "react-icons/fa";
+import { AiOutlineUp } from "react-icons/ai";
 import '../style/footer.css'
 const Footer = () => {
     return (
@@ -66,7 +67,9 @@ const Footer = () => {
             </div>
 
 
-
+            <div class="btn-3">
+                <a href="#"><AiOutlineUp className='w-9 h-9 fixed bottom-4 right-4 text-white bg-[#1e1e1e84] z-20 rounded'/></a>
+            </div>
 
 
         </>
