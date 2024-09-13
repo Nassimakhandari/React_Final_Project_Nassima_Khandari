@@ -22,7 +22,7 @@ const Blog = () => {
                         <div className='flex flex-col gap-8'>
                             <div className='w-full overflow-hidden'>
                                 <div className='relative overflow-hidden'>
-                                    <img src={images.blog1} alt="" className='w-full md:w-[85%] transition-all duration-500 ease-in-out hover:scale-110' />
+                                    <img src={images.blog1} alt="" className='w-full md:w-[85%] transition-all duration-500 ease-in-out hover:scale-110g' />
                                     <div className='absolute bottom-4 left-4'>
                                         <p className='bg-black text-white py-2 px-4'>28 DEC, 2017</p>
                                     </div>
