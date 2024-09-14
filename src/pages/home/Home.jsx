@@ -4,7 +4,6 @@ import images from '../../constant/images';
 import Data from "../../json/app.json"
 import Slider from 'react-slick';
 import React from 'react';
-import '../../style/home.css'
 import app2 from "../../json/app2.json";
 import { useNavigate } from 'react-router-dom'
 import { useCart } from '../../context/index.jsx';
@@ -89,53 +88,56 @@ const Home = () => {
           </div>
         </Slider>
       </div>
-      <div className="flex gap-5 justify-center items-center section2">
-        <div className="flex flex-col gap-5">
-          <div className="relative overflow-hidden section2-child">
-            <img src={images.img1} className="h-[58vh] w-[23.6vw] transition-all duration-500 ease-in-out hover:scale-110" alt="" />
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 transition duration-500 bg-white py-2 px-12 hover:bg-[#e65540] hover:text-white font-light text-lg">
-              <button >Dresses</button>
+      <div className="">
+      <div className="container mx-auto p-8">
+        <div className="flex flex-col md:flex-row gap-5 justify-center items-center section2">
+          <div className="flex flex-col gap-5">
+            <div className="relative overflow-hidden section2-child">
+              <img src={images.img1} className="h-[58vh] w-full md:w-[40vw] lg:w-[23.6vw] transition-all duration-500 ease-in-out hover:scale-110" alt="Woman wearing a floral dress" />
+              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 transition duration-500 bg-white py-2 px-12 hover:bg-[#e65540] hover:text-white font-light text-lg">
+                <button>Dresses</button>
+              </div>
+            </div>
+            <div className="relative overflow-hidden section2-child">
+              <img src={images.img2} className="h-[38vh] w-full md:w-[40vw] lg:w-[23.6vw] object-cover transition-all duration-500 ease-in-out hover:scale-110" alt="Black sunglasses" />
+              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 transition duration-500 bg-white py-2 px-12 hover:bg-[#e65540] hover:text-white font-light text-lg">
+                <button>Sunglasses</button>
+              </div>
             </div>
           </div>
-          <div className="relative overflow-hidden section2-child">
-            <img src={images.img2} className="h-[38vh] w-[23.6vw] object-cover transition-all duration-500 ease-in-out hover:scale-110" alt="" />
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 transition duration-500 bg-white py-2 px-12 hover:bg-[#e65540] hover:text-white font-light text-lg">
-              <button>Sunglasses</button>
-            </div>
-          </div>
-        </div>
 
-        <div className="flex flex-col gap-5">
-          <div className="relative overflow-hidden section2-child">
-            <img src={images.img3} className="h-[38vh] w-[23.6vw] object-cover transition-all duration-500 ease-in-out hover:scale-110" alt="" />
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 transition duration-500 bg-white py-2 px-12  hover:bg-[#e65540] hover:text-white font-light text-lg">
-              <button >Watches</button>
+          <div className="flex flex-col gap-5">
+            <div className="relative overflow-hidden section2-child">
+              <img src={images.img3} className="h-[38vh] w-full md:w-[40vw] lg:w-[23.6vw] object-cover transition-all duration-500 ease-in-out hover:scale-110" alt="Black wristwatch" />
+              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 transition duration-500 bg-white py-2 px-12 hover:bg-[#e65540] hover:text-white font-light text-lg">
+                <button>Watches</button>
+              </div>
+            </div>
+            <div className="relative overflow-hidden section2-child">
+              <img src={images.img4} className="h-[58vh] w-full md:w-[40vw] lg:w-[23.6vw] transition-all duration-500 ease-in-out hover:scale-110" alt="Person wearing black sneakers" />
+              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 transition duration-500 bg-white py-2 px-12 hover:bg-[#e65540] hover:text-white font-light text-lg">
+                <button>Footerwear</button>
+              </div>
             </div>
           </div>
-          <div className="relative overflow-hidden section2-child">
-            <img src={images.img4} className="h-[58vh] w-[23.6vw] transition-all duration-500 ease-in-out hover:scale-110" alt="" />
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 transition duration-500 bg-white py-2 px-12 hover:bg-[#e65540] hover:text-white font-light text-lg">
-              <button>Footerwear</button>
-            </div>
-          </div>
-        </div>
 
-        <div className="flex flex-col gap-5">
-          <div className="relative overflow-hidden section2-child">
-            <img src={images.img5} className="h-[58vh] w-[23.6vw] transition-all duration-500 ease-in-out hover:scale-110" alt="" />
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 transition duration-500 bg-white py-2 px-12 hover:bg-[#e65540] hover:text-white font-light text-lg">
-              <button>Bags</button>
+          <div className="flex flex-col gap-5">
+            <div className="relative overflow-hidden section2-child">
+              <img src={images.img5} className="h-[58vh] w-full md:w-[40vw] lg:w-[23.6vw] transition-all duration-500 ease-in-out hover:scale-110" alt="Gray backpack" />
+              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 transition duration-500 bg-white py-2 px-12 hover:bg-[#e65540] hover:text-white font-light text-lg">
+                <button>Bags</button>
+              </div>
             </div>
-          </div>
-          <div className="relative overflow-hidden section2-child">
-            <img src={images.img6} className="h-[38vh] w-[23.6vw] transition-all duration-500 ease-in-out hover:scale-110" alt="" />
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 transition duration-500 bg-white py-2 px-12 hover:bg-[#e65540] hover:text-white font-light text-lg">
-              <button>Accessories</button>
+            <div className="relative overflow-hidden section2-child">
+              <img src={images.img6} className="h-[38vh] w-full md:w-[40vw] lg:w-[23.6vw] transition-all duration-500 ease-in-out hover:scale-110" alt="Various accessories including a watch, sunglasses, and wallets" />
+              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 transition duration-500 bg-white py-2 px-12 hover:bg-[#e65540] hover:text-white font-light text-lg">
+                <button>Accessories</button>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
+    </div>
       <div className="slider-container pt-20 mx-auto max-w-6xl flex-row justify-center ">
         <h1 className="font-bold text-3xl text-center">FEATURED PRODUCTS</h1>
         <Slider {...settings}>

@@ -4,13 +4,20 @@ import { FaRegUserCircle } from 'react-icons/fa';
 import { LiaShoppingBagSolid } from "react-icons/lia";
 import { useNavigate } from 'react-router-dom';
 import { useCart } from '../context/index.jsx';
+
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isCartVisible, setIsCartVisible] = useState(false);
     const { cart } = useCart();
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
+
+    const toggleCartVisibility = () => {
+        setIsCartVisible(!isCartVisible);
+    };
+
     const navigate = useNavigate();
 
     return (
@@ -23,9 +30,9 @@ const Navbar = () => {
                     </button>
 
                     <div className="relative">
-                        <LiaShoppingBagSolid className='w-8 h-8 text-gray-400 bg-white' />
+                        <LiaShoppingBagSolid className='w-8 h-8 text-gray-400 bg-white cursor-pointer' onClick={toggleCartVisibility} />
                         {cart.length > 0 && (
-                            <span className="absolute top-0 right-0 bg-[#e65540] text-white rounded-full px-1 text-xs">{cart.length}</span>
+                            <span className="absolute top-0 right-0 bg-gray-500 text-white rounded-full px-1 text-xs">{cart.length}</span>
                         )}
                     </div>
                     <button data-collapse-toggle="navbar-user" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-user" aria-expanded={isMenuOpen} onClick={toggleMenu}
@@ -63,6 +70,37 @@ const Navbar = () => {
                     </ul>
                 </div>
             </div>
+            {isCartVisible && (
+                <div className="fixed top-16 right-0 mb-4 mr-4 w-80 bg-white shadow-lg p-4 rounded-lg">
+                    <button className="absolute top-2 right-2 text-gray-600" onClick={toggleCartVisibility}>
+                        ×
+                    </button>
+                    <div className="flex items-center space-x-4 mb-4">
+                        <img src={images.img9} alt="" className="w-16 h-16 object-cover" />
+                        <div>
+                            <p className="text-gray-800">Boxy7 T-Shirt with Roll Sleeve</p>
+                            <p className="text-gray-600">1 × $20.00</p>
+                            <p className="text-gray-600">x</p>
+                        </div>
+                    </div>
+                    <div className="flex items-center space-x-4 mb-4">
+                        <img src={images.img9} alt="" className="w-16 h-16 object-cover" />
+                        <div>
+                            <p className="text-gray-800">Boxy7 T-Shirt with Roll Sleeve</p>
+                            <p className="text-gray-600">1 × $20.00</p>
+                            <p className="text-gray-600">x</p>
+                        </div>
+                    </div>
+                    <div className="flex justify-between items-center mb-4">
+                        <p className="text-gray-800">Subtotal :</p>
+                        <p className="text-gray-800">$40.00</p>
+                    </div>
+                    <div className="flex space-x-4">
+                        <button className="w-full font-light py-2 bg-black text-white rounded-full">VIEW CART</button>
+                        <button className="w-full font-light py-2 bg-black text-white rounded-full">CHECKOUT</button>
+                    </div>
+                </div>
+            )}
         </nav>
     );
 };
