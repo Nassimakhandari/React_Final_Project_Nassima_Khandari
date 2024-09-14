@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import images from '../constant/images';
 import { FaRegUserCircle } from 'react-icons/fa';
 import { LiaShoppingBagSolid } from "react-icons/lia";
-import {useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { useCart } from '../context/index.jsx';
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const { cart } = useCart();
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -14,13 +16,18 @@ const Navbar = () => {
     return (
         <nav className="bg-white border-gray-200 dark:bg-gray-900 shadow-md p-2 fixed z-20 top-0 left-0 right-0">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-                <img src={images.logo} alt="Logo" />
+                <img src={images.logo} alt="" />
                 <div className="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse gap-5">
-                    <button type="button" className="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" onClick={toggleMenu}
-                    >
-                        <FaRegUserCircle className='w-16 h-7 text-gray-400 bg-white border-r-[2px] pr-3' />
+                    <button type="button" className="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-gray-300 " onClick={toggleMenu}>
+                        <FaRegUserCircle onClick={() => navigate('/register')} className='w-16 h-7 text-gray-400 bg-white border-r-[2px] pr-3' />
                     </button>
-                    <button><LiaShoppingBagSolid className='w-8 h-8 text-gray-400 bg-white' /></button>
+
+                    <div className="relative">
+                        <LiaShoppingBagSolid className='w-8 h-8 text-gray-400 bg-white' />
+                        {cart.length > 0 && (
+                            <span className="absolute top-0 right-0 bg-[#e65540] text-white rounded-full px-1 text-xs">{cart.length}</span>
+                        )}
+                    </div>
                     <button data-collapse-toggle="navbar-user" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-user" aria-expanded={isMenuOpen} onClick={toggleMenu}
                     >
                         <span className="sr-only">Open main menu</span>

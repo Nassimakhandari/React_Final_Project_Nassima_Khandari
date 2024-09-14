@@ -7,12 +7,14 @@ import React from 'react';
 import '../../style/home.css'
 import app2 from "../../json/app2.json";
 import { useNavigate } from 'react-router-dom'
+import { useCart } from '../../context/index.jsx';
+
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
     <div
       className={`${className} custom-next-arrow`}
-      style={{ ...style, display: "block", right: "10px", fontSize: "" }}
+      style={{ ...style, display: "block", right: "2px", fontSize: "" }}
       onClick={onClick}
     >
 
@@ -25,7 +27,7 @@ function SamplePrevArrow(props) {
   return (
     <div
       className={`${className} custom-prev-arrow `}
-      style={{ ...style, display: "block", left: "10px", zIndex: 1 }}
+      style={{ ...style, display: "block", left: "2px", zIndex: 1 }}
       onClick={onClick}
     >
     </div>
@@ -46,6 +48,11 @@ const Home = () => {
   const randomJson = app2[index];
 
   const navigate = useNavigate();
+  const { addToCart } = useCart();
+
+  const handleAddToCart = (product) => {
+    addToCart(product);
+  };
   return (
     <>
       <div className='overflow-hidden h-[91vh] pt-20'>
@@ -136,11 +143,21 @@ const Home = () => {
             <div className="flex items-center justify-center gap-9 ">
               {Data.slice(0, 4).map((e) => (
                 <div className="pt-16 pb-10 w-[40%] ">
-                  <div>
-                    <img src={images[e.image]} alt="" className=" w-[100%] object-cover  md:h-96 md:w-[50vw]" />
+                  <div className='relative group'>
+                    <img src={images[e.image]} alt="" className='w-full transition-all duration-300 ease-in-out group-hover:brightness-75' />
+                    {
+                      e.sale && (
+                        <div className='absolute top-3 left-2 bg-[#e65540] text-white px-5 py-1 rounded-full font-light text-xs'>
+                          Sale
+                        </div>
+                      )
+                    }
+                    <div className='absolute top-[90%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
+                      <button onClick={() => handleAddToCart(e)} className='bg-black px-2 py-2 rounded-full text-white transition duration-500 hover:bg-[#e65540] hover:text-white font-light'>ADD TO CART</button>
+                    </div>
                   </div>
                   <div className="pt-4 ">
-                    <h1 className="font-light text-gray-700 hover:text-[#e65540] "key={e.title} onClick={() => navigate(`/details/${e.title}`)}>{e.title}</h1>
+                    <h1 className="font-light text-gray-700 hover:text-[#e65540] " key={e.title} onClick={() => navigate(`/details/${e.title}`)}>{e.title}</h1>
                     <h1 className="font-light text-gray-700">{e.price}</h1>
                   </div>
                 </div>
@@ -151,8 +168,18 @@ const Home = () => {
             <div className="flex items-center justify-center gap-9 ">
               {Data.slice(4).map((e) => (
                 <div className="pt-16 pb-10 w-[40%]" >
-                  <div>
-                    <img src={images[e.image]} alt="" className=" w-[100%] object-cover  md:h-96 md:w-[50vw]" />
+                  <div className='relative group'>
+                    <img src={images[e.image]} alt="" className='w-full transition-all duration-300 ease-in-out group-hover:brightness-75' />
+                    {
+                      e.sale && (
+                        <div className='absolute top-3 left-2 bg-[#e65540] text-white px-5 py-1 rounded-full font-light text-xs'>
+                          Sale
+                        </div>
+                      )
+                    }
+                    <div className='absolute top-[90%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
+                      <button onClick={() => handleAddToCart(e)} className='bg-black px-2 py-2 rounded-full text-white transition duration-500 hover:bg-[#e65540] hover:text-white font-light'>ADD TO CART</button>
+                    </div>
                   </div>
                   <div className="pt-4 ">
                     <h1 className="font-light text-gray-700 hover:text-[#e65540] " key={e.title} onClick={() => navigate(`/details/${e.title}`)}>{e.title}</h1>
@@ -242,21 +269,22 @@ const Home = () => {
         <div className="text-3xl font-bold">
           <h1>@ FOLLOW US ON INSTAGRAM</h1>
         </div>
-        <div className="flex gap-36 text-center ">
-          <div>
+        <div className="flex flex-col md:flex-row md:gap-40 text-center">
+          <div className="md:flex-1">
             <h1 className="text-gray-700 font-light text-xl">Free Delivery Worldwide</h1>
             <h1 className="text-gray-400 font-light text-sm">Mirum est notare quam littera gothica</h1>
           </div>
-          <div className="border-gray-300 border-l-[1px] pl-20">
+          <div className="border-gray-300 border-t-[1px] md:border-t-0 md:border-l-[1px] md:pl-20 md:flex-1">
             <h1 className="text-gray-700 font-light text-xl">30 Days Return</h1>
             <h1 className="text-gray-400 font-light text-sm">Simply return it within 30 days for an exchange.</h1>
           </div>
-          <div className="border-gray-300 border-l-[1px] pl-20">
+          <div className="border-gray-300 border-t-[1px] md:border-t-0 md:border-l-[1px] md:pl-20 md:flex-1">
             <h1 className="text-gray-700 font-light text-xl">Store Opening</h1>
             <h1 className="text-gray-400 font-light text-sm">Shop open from Monday to Sunday</h1>
           </div>
         </div>
       </div>
+
     </>
   );
 };
