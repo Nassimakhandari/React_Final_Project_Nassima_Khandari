@@ -7,7 +7,7 @@ import { useCart } from '../context/index.jsx';
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [isCartVisible, setIsCartVisible] = useState(false);
+    const [cardShop, setcardShop] = useState(false);
     const { cart } = useCart();
 
     const toggleMenu = () => {
@@ -15,7 +15,7 @@ const Navbar = () => {
     };
 
     const toggleCartVisibility = () => {
-        setIsCartVisible(!isCartVisible);
+        setcardShop(!cardShop);
     };
 
     const navigate = useNavigate();
@@ -70,7 +70,7 @@ const Navbar = () => {
                     </ul>
                 </div>
             </div>
-            {isCartVisible && (
+            {cardShop && (
                 <div className="fixed top-16 right-0 mb-4 mr-4 w-80 bg-white shadow-lg p-4 rounded-lg">
                     <button className="absolute top-2 right-2 text-gray-600" onClick={toggleCartVisibility}>
                         ×
